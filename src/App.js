@@ -1,8 +1,16 @@
 import React from 'react';
+import { Routes, Route, Router} from 'react-router'
+import Ordenes from './components/paginas/Ordenes'
 
 function App() {
   return (
-    <h1 className="">Hola mundo</h1>
+    <div>
+      <Routes>
+        <Route path="/" element={<Ordenes />} />
+        <Route path="/" element={<Ordenes />} />
+        <Route path="/" element={<Ordenes />} />
+      </Routes>
+    </div>
   );
 }
 
