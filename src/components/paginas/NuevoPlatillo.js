@@ -130,6 +130,21 @@ const NuevoPlatillo = () => {
 
                             />
                         </div>
+                        
+                        { subiendo && (
+                            <div className="h-12 relative w-full border">
+                                <div className="bg-green-500 absolute left-0 top-0 text-white px-2 text-sm h-12 flex items-center" style={{width: `${progreso}%`}}>
+                                    {progreso}%
+                                </div>
+                            </div>
+                        )}
+
+                        { urlImagen && (
+                            <p className="bg-green-500 text-white p-3 text-center my-5">
+                                La imagen se subió correctamente
+                            </p>
+                        )}
+
                         { formik.touched.precio && formik.errors.precio ?
                             (<div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mb-5" role="alert">
                                 <p className="font-bold">Hubo un error</p>
